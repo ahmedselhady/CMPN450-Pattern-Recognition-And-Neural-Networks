@@ -1,4 +1,4 @@
-# Review of mathematics ssentials we will use throughout the course:
+# Review Of Mathematics Essentials We Will Use Throughout The Course:
 
 ## Probability Review
 * [Axioms of Probability](https://www.geeksforgeeks.org/mathematics-probability/)
