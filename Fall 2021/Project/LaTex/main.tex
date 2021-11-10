@@ -1,0 +1,269 @@
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[authoryear]{natbib}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage[margin=1in]{geometry}
+\usepackage{pgfplots}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{arabtex}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Pattern Recognition and Neural Networks}
+\rhead{Fall 2020}
+\cfoot{Page \thepage}
+
+\title{Individual \LaTeX\:Exercise}
+\author{Your Name Here}
+\date{\today} % You can write in any date within the brackets.
+\setcounter{tocdepth}{1}
+\linespread{1.1}
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ l c r }
+\includegraphics[scale=2.5]{Cairo_University_Crest.png} &
+Cairo University &
+\includegraphics[scale=0.5]{download.png}
+\\
+& Faculty of Engineering & \\
+& Computer Engineering Department & \\
+\end{tabular}
+\end{center}
+
+\vspace{1.5cm}
+\begin{center}
+   \LARGE \textbf{Pattern Recognition and Neural Networks}
+   \\
+   \vspace{1cm}
+   \LARGE \textbf {Project Document}
+   \\
+   \vspace{0.5cm}
+   \LARGE {Arabic Calligraphy Font Identification}
+\end{center}
+
+\begin{center}
+\includegraphics[scale=2]{intro.jpg}
+\end{center}
+\begin{center}
+    \large{Fall 2021}
+\end{center}
+\newpage
+\tableofcontents
+
+% \addcontentsline{toc}{section}{Objectives}
+\newpage
+\section{Objectives}
+This project aims to put your understanding of machine learning algorithms into practice with a real world problem. \textbf{By the end of this project you should be able to:}
+\begin{enumerate}
+    \item analyze the problem, extract features, and choose the most appropriate preprocessing method (if necessary).
+    \item assess performance of different machine learning techniques.
+    \item compare and combine different machine learning components into one big solution.
+    \item design and implement your own ML pipeline.
+\end{enumerate}
+
+\section{Project Description}
+In this project, you are required to implement an \textbf{Arabic Font Identification System} that will be able to identify the font for a given Arabic text snippet. This font identification system proves very useful in a wide range of applications, such as the fields of graphic design like in illustrator arts and optical character recognition for digitizing hardcover documents. Not limited to that, but it also raised interest in the analysis of historical texts authentic manuscript verification where we would like to know the origin of a manuscript. For example, if the manuscript is written in Andalusi font, it is most probably dates to the Andalusian Era. If it were written in Demasqi font, it is most probably dates to the Abbasi Era. 
+\\
+
+You should implement a complete machine learning pipeline, \textit{i.e.} the project should include (but not limited to) the following modules: 
+\begin{itemize}
+    \item Pre-processing Module.
+    \item Feature Extraction/Selection Module. 
+    \item Model Selection and Training Module.
+    \item Performance Analysis Module.
+\end{itemize}
+
+You will need to research about the topic, read research papers that tackle this application and similar applications, and do a literature survey that can help you identify the best approaches/ techniques that you can start with in order to improve the accuracy of your results. 
+
+\newpage
+You will work with the \textbf{(ACdb) Arabic Calligraphy Database } containing 9 categories of computer printed Arabic text snippets. Section 8 of this document provides complete and precise description of the dataset format.\\
+You will divide the data into: 
+\begin{itemize}
+    \item \textbf{Training set} to train your model. 
+    \item \textbf{Validation set} to tune the parameters of your model. 
+    \item \textbf{Test set} to report the results of your models. 
+\end{itemize}
+ 
+Note that the dataset contains many forms of calligraphic text ranging from full form text to simple words. Your approach should be robust to these variations; it should be able to capture the font style regardless of the amount of text in the sample.\\
+The dataset can be found here:\\
+\begin{center}
+\url{https://drive.google.com/file/d/1dC7pwzT_RHL9B42H8-Nzf5Sant-86NV6/view}
+\end{center}
+
+\section{Team Formation}
+A team should be formed of 3 to 4 members. No team should have more than 4 members under any condition. Please register your team number in the provided spreadsheets.
+All team members should attend the final project discussion. If one team member failed to show up in the project discussion, then they are regarded as zero contributors in this project.
+
+\section{Final Deliverables}
+By the end of this project, each team should submit the following:
+\begin{enumerate}
+    \item A \textbf{PDF report} that includes the following sections fully and clearly described, while describing all the work done and approaches adopted. You should include also the unsuccessful trials.
+    \begin{enumerate}
+        \item Project Pipeline.
+        \item Preprocessing Module.
+        \item Feature Extraction/Selection Module.
+        \item Model Selection/Training Module. 
+        \item Performance Analysis Module. 
+        \item (Optional) Any other developed modules. 
+        \item \textbf{(BONUS 2 Marks)} A formal comparison between modules they tested out -if any- and the criteria on which they settled on the used one(s)
+        \item Enhancements and Future work.
+        \item Work Load Distribution
+    \end{enumerate}
+    
+    
+\item \textbf{Code} as a zipped folder with the format code [team number].zip containing all code
+developed with a \textit{readme} file including all packages or libraries needed to run
+this code and how to run the code. It is highly recommended to provide an executable file beside the source code.
+\end{enumerate}
+
+\section{Rules and Instructions}
+All students must follow the following rules and instructions:
+\begin{enumerate}
+\item All projects are submitted online and discussed on premise in the classroom. 
+
+\item Don’t print any document or report. All submissions are electronic.
+
+\item There will be a late penalty for the final project submission. 
+
+\item Any sign of cheating or plagiarism \textbf{will not be tolerated.} If one team got caught cheating or plagiarizing from another team, both teams will receive a \textbf{ZERO} for the project grade, in addition to a penalty up to 50\% of the project grade.
+
+\item Workload should be distributed fairly and equally. Team members who
+did not contribute effectively in the project will be penalized.
+6. All team members should attend the final discussion. A team member who
+fails to show up will get a ZERO in the discussion grade.
+
+\end{enumerate}
+
+\section{Grading Criteria}
+\label{Grading}
+
+This project is a competition-based one. This means the better you work, the higher your grade!
+The grading criteria of this project is divided as follows:
+\begin{enumerate}
+    \item \textbf{Report and Discussion: (20\%):} This point includes the report submission, the quality of the report and the discussion with all team members. It also evaluates how all team members fully understand the details of the project and can elaborate on the examiner questions.
+    \item \textbf{Project Performance (80\%):} Both results accuracy (65\%) and running time (15\%) will be taken into consideration by the given weights. However, it’s not a linear formula but the ranking procedure will be based only on these two factors. Take care that your language choice might affect the running time.
+\end{enumerate}
+
+\newpage
+\section{FAQ}
+
+\begin{enumerate}
+    \item \textbf{What programming language(s) can I use?}
+    \\
+    You may use any programming language of your choice!
+    
+    \item \textbf{Is there any restriction on the techniques or approaches to use in any phase of the project?}
+    \\
+    You are free to use any approach or technique you find appropriate for the problem in hand. It’s actually your task to find out the best combination of techniques that will yield the best results. However, you are \textbf{limited only to classical machine learning methods} such as \textit{Bayesian Classifiers, KNN, Linear/Logistic Regression, Neural Networks (with two hidden layers as a maximum), Support Vector Machines, Principal Component Analysis, etc.} 
+    \\
+    You are NOT ALLOWED to use \textbf{deep learning} techniques \textit{e.g.} \textit{Convolutional Neural Networks, Recurrent Neural Networks, etc.}
+    
+    \item \textbf{How to find research papers for this topic?}
+    \\
+    There are many resources on the web tackling this problem. You can start by creating an account on \href{https://www.ekb.eg/}{\color{blue}EKB (Egyptian Knowledge Bank)} with your university provided student email address, which will give you wide access to a huge number of research papers and journals. You can also use the Academic search engines such as \href{https://academic.microsoft.com/}{\color{blue} Microsoft Academic}, \href{https://www.semanticscholar.org/me/research}{\color{blue}  Semantic Scholar}, or \href{https://scholar.google.com/}{\color{blue}Google Scholar)} a lot of articles are free for public.
+    
+    \item \textbf{How will our project be tested?}
+    \\
+    We will test with our own test set (you have not seen before) in order to standardize the way all teams are graded and ranked. However, you should divide your dataset into Training, Validating and Testing set. The test set is identical to the IAM database but it is not directly extracted from it. 
+    
+    \item \textbf{How will our project be ranked?}
+    \\
+    Please refer to the \nameref{Grading} section for the grading criteria. The teams will be ranked according to some formula comprising the results accuracy as well as the time taken to generate the results, with the larger weight for the results accuracy. For example, Team X had results with accuracy {\color{blue} 92.0\%}, with running time = {\color{blue} 5 seconds}, will be ranked above team with accuracy {\color{blue} 80.0\%}, with running time = {\color{blue} 2 seconds}.
+\end{enumerate}
+
+\newpage
+\section{Delivery Instructions}
+\subsection{Input Format}
+The project will be evaluated using our own made test set. The test set is identical to the sample images in the \textbf{ACdb}. You will receive a folder named data. Under this directory, you will find N-test images in \textit{.png} format named \textbf{01, 02, 03..100, 101, 102....etc}
+\\
+\\
+The hierarchy can be visualized as follows (assuming 5 test samples):
+\begin{itemize}
+    \item \textbf{\textbackslash data}
+    \begin{itemize}
+        \item \textbf{ 01.png}
+        \item \textbf{ 02.png}
+        \item \textbf{ 03.png}
+        \item \textbf{ 04.png}
+        \item \textbf{ 05.png}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Output Format}
+You should generate \textbf{TWO} text files:
+\begin{enumerate}
+    \item \textbf{results.txt}
+    \item \textbf{time.txt}
+\end{enumerate}
+
+Make sure you read the test data in the order they are given since you need to output the values in the exact order.
+
+\subsubsection{Results}
+In the first file \textbf{results.txt}, you should output the prediction of the model for every test case of the N test cases in a single line. The prediction of the model is a single number from the set $\{1,2,3,4,5,6,7,8,9\}$.
+\newpage
+The format of this file should be as follows:\\\\
+\noindent\fbox{%
+    \parbox{0.5\textwidth}{%
+        2\\9\\8\\7\\1\\4\\3\\\vdots\\6\\1
+    }%
+}
+\\\\
+This means that: For the first test sample \textbf{01.png}, your model predicted it belongs to \textbf{class 2: naskh}, whereas in for the second test sample \textbf{02.png}, your model predicted it belongs to \textbf{class 9: square-kufic }, and so on and so forth.
+\\\\
+\textbf{Important Notes:}
+\begin{enumerate}
+    \item Make sure that you output the result for the test cases in the same order as the input. This mistake is very common as you might think you are ingesting the test cases in order, however, you find you are reading the test cases in an incorrect way that you are processing folder 10 before 01 and so on.
+    \item This file should not include anything other than the model predictions as indicated.
+    \item Each line contains exactly \textbf{ONE} prediction
+    \item Do not include the test case number.
+    \item Do not include any extra information.
+    \item Again, Do not print all the test cases in one single line.
+\end{enumerate}
+
+\subsubsection{Time}
+In the second file \textbf{time.txt}, You should output the time taken (in seconds) by every iteration of the N iterations in a single line.
+\newpage
+The format of this file should be as follows:\\\\
+\noindent\fbox{%
+    \parbox{0.5\textwidth}{%
+        30.00\\
+35.25\\
+32.32\\
+40.15\\
+35.12\\
+38.98\\
+26.23\\
+\vdots\\
+20.65
+    }%
+}
+\\\\
+This means that: In the first iteration, your code ran in \textbf{30.00 seconds},
+in the second iteration, your code ran in \textbf{35.25 seconds} and so on until the Nth iteration where your code ran in \textbf{20.65 seconds}.
+\\\\
+\textbf{Important Notes:}
+\begin{enumerate}
+    \item For every iteration, place a timer \textbf{after} reading the training images and the test image, and \textbf{after} generating the prediction for the test image. You should output the difference between the two times (i.e. the time taken for a single iteration to be processed in the complete pipeline without any I/O overhead).
+    \item The numbers in the above example are just random numbers and have nothing to do with the actual running times. These numbers are \textbf{NOT} a reference and they are just for illustration.
+    \item The running times should be rounded to \textbf{two decimal places}.
+    \item This file should not include anything other than the model running times as indicated.
+    \item Do not include the test case number.
+    \item Do not include any extra information.
+    \item Do not print all the test cases in one single line.
+    \item Do not print the results in the console. You have to generate the two files results.txt and time.txt
+    
+\end{enumerate}
+\end{document}
